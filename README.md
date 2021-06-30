@@ -92,9 +92,9 @@ Run the application by running the jar
     "time": "One o' clock"
     }`
 
-####Note:
+#### Note:
 Application is written in Java 8, you need to use the Runtime environment which is java 8 or above
-###Testing
-The tests are written in Junit and can be run using this command
 
+### Testing
+The tests are written in Junit and can be run using this command
 `./gradlew clean test`
