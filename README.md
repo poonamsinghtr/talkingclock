@@ -14,7 +14,7 @@ It will generate the Human friendly time as
 
 
 
-#You can run the application in three ways 
+# You can run the application in three ways 
 
 ### 1. Console app without giving any input
 
