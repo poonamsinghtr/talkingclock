@@ -1,5 +1,6 @@
 package com.lloyds.talking.clock;
 
+import com.lloyds.talking.clock.exception.InvalidTimeException;
 import com.lloyds.talking.clock.service.TalkingClockService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +26,10 @@ public class TalkingClockConsoleApplication implements CommandLineRunner {
             System.exit(1);
         }
         String inputTime = args.length == 0 ? "" : args[0];
-        LOGGER.info(talkingClockService.getHumanFriendlyTime(inputTime));
+        try {
+            LOGGER.info(talkingClockService.getHumanFriendlyTime(inputTime));
+        } catch (InvalidTimeException exp) {
+            LOGGER.error(exp.getMessage());
+        }
     }
 }
